@@ -1,0 +1,499 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    background: #ffffff;
+    border-right: 1px solid #E4E4E4;
+    padding: 132px 20px 72px;
+    transition: width .2s;
+
+    &__head {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 132px;
+        padding-top: 12px;
+        .sidebar__close {
+            display: none;
+            margin-left: 8px;
+            font-size: 0;
+            .icon {
+                font-size: 18px;
+                fill: #11142D;
+            }
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-right: 28px;
+        font-size: 0;
+    }
+    &__pic {
+        width: 70%;
+    }
+    &__pic_dark {
+        display: none;
+    }
+
+    &__toggle {
+        font-size: 0;
+        svg {
+            transition: transform .2s;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        flex-grow: 1;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__nav {
+        position: relative;
+        margin-bottom: 20px;
+        transition: all .8s;
+        &:not(:last-child):before{
+            content: "";
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            bottom: 0;
+            height: 1px;
+            background: #F0F3F6;
+        }
+        .sidebar__item{
+            margin-top: 5px;
+        }
+    }
+    &__caption{
+        margin: 11px 0;
+        padding-left: 20px;
+        font-weight: 600;
+        font-size: 14px;
+        span{
+            margin-left: 5px;
+        }
+        @include respond-to('desktop-bp') {
+            padding-left: 0;
+            text-align: center;
+            span {
+                display: none;
+            }
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        height: 56px;
+        padding: 0 20px;
+        border-radius: 12px;
+        white-space: nowrap;
+        font-weight: 600;
+        color: #808191;
+        transition: all .4s;
+    }
+
+    &__item:hover, &__item.active {
+        color: #355DFF;
+    }
+
+    &__item .icon g [fill]{
+        fill: #808191;
+    }
+
+    &__item:hover .icon g [fill], &__item.active .icon g [fill]{
+        fill: #355DFF;
+    }
+
+    &__item:hover, &__item.active {
+        background: rgba(188,197,241, 0.3);
+    }
+
+    &__icon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+        & .icon {
+            height: 30px;
+            width: 30px;
+            fill: #808191;
+            & g [fill]{
+                transition: fill .4s;
+            }
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 8px;
+            height: 8px;
+            background: #FF6628;
+            border-radius: 50%;
+            opacity: 0;
+        }
+    }
+
+    &__icon.active:before {
+        opacity: 1;
+    }
+
+    &__item &__text {
+        text-transform: capitalize;
+        margin-left: 16px;
+    }
+
+    &__bottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        padding: 5px 20px;
+        transition: padding .2s;
+        background: #FFFFFF;
+        border-top: 1px solid #E4E4E4;
+    }
+
+    &__profile-img{
+        width: 40px;
+        height: 40px;
+    }
+
+    &.active &__caption {
+        padding-left: 0;
+        text-align: center;
+        font-size: 14px;
+        span{
+            display: none;
+        }
+    }
+    &.active, &.small {
+        width: 96px;
+        transition: all .2s;
+    }
+
+    &.small.active {
+        width: 255px;
+        box-shadow: 5px 0 40px rgba(0, 0, 0, 0.1);
+    }
+
+    &.active &__logo,
+    &.small &__logo,
+    &.active &__bottom &__text{
+        display: none;
+    }
+
+    &.small.active &__logo {
+        display: inline-block;
+    }
+
+
+    &.active &__item,
+    &.small &__item {
+        padding: 0 16px;
+    }
+
+    &.small.active &__item {
+        padding: 0 20px;
+    }
+
+    &.active &__bottom,
+    &.small &__bottom {
+        padding: 0 5px;
+    }
+
+    &.small.active &__bottom {
+        padding: 0 20px;
+    }
+
+    &__profile {
+        margin-top: 5px;
+    }
+
+    &__details {
+        position: relative;
+        display: none;
+        padding: 20px 10px 33px;
+        margin-bottom: -15px;
+        background: #F7F7F7;
+        border-radius: 12px;
+        transition: all .5s;
+        &.show{
+            display: block;
+            transition: all .5s;
+        }
+    }
+
+    &__details:before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 72px;
+        height: 4px;
+        border-radius: 2px;
+        background: #E4E4E4;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        height: 56px;
+        padding: 0 20px;
+        border-radius: 12px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #808191;
+        transition: all .25s;
+        &:hover {
+            background: #ffffff;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.04);
+        }
+        .sidebar__text{
+            margin-left: 16px;
+        }
+        .sidebar__icon {
+            width: 24px;
+            height: 24px;
+            margin: 0;
+            text-align: center;
+            transition: all .25s;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 56px;
+        padding-right: 5px;
+    }
+
+    &__img .icon {
+        font-size: 19px;
+    }
+
+    &__user {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        height: 62px;
+        border-radius: 12px;
+        color: #11142D;
+        cursor: pointer;
+        transition: background .25s;
+    }
+
+    &__user:hover, &__user.active {
+        background: #3F8CFF;
+        color: #ffffff;
+    }
+
+    &__user:hover &__status, &__user.active &__status {
+        color: #ffffff;
+    }
+
+    &__user:hover .icon, &__user.active .icon {
+        fill: #ffffff;
+    }
+
+    &__ava {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 0;
+    }
+
+    &__ava &__pic {
+        width: 100%;
+        min-height: 100%;
+        border-radius: 50%;
+    }
+
+    &__arrow {
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+    }
+
+    &__arrow .icon {
+        font-size: 16px;
+        fill: #11142D;
+    }
+
+    &__desc {
+        padding: 0 25px 0 10px;
+    }
+
+    &__man {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 1.42857;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    &__status {
+        font-size: 14px;
+        text-transform: lowercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1;
+        color: #808191;
+    }
+
+    &.active &__arrow,
+    &.active &__desc{
+        display: none;
+    }
+
+}
+@include respond-to('desktop-xl'){
+    .sidebar {
+        padding-top: 120px;
+    }
+    .sidebar__head {
+        height: 120px;
+        padding: 0;
+    }
+}
+
+@include respond-to('desktop-bp'){
+    .sidebar {
+        width: 96px;
+    }
+    .sidebar__logo {
+        display: none;
+    }
+    .sidebar__toggle svg {
+        transform: scale(-1, 1);
+    }
+    .sidebar__item {
+        padding: 0 16px;
+    }
+    .sidebar__mail {
+        display: none;
+    }
+    .sidebar__bottom {
+        padding: 0 5px;
+    }
+    .sidebar.active {
+        width: 255px;
+        box-shadow: 5px 0 40px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar.active .sidebar__logo {
+        display: inline-block;
+    }
+    .active .sidebar__toggle svg {
+        transform: scale(1);
+    }
+    .sidebar.active .sidebar__item {
+        padding: 0 20px;
+    }
+    .sidebar.active .sidebar__bottom {
+        padding: 0 20px;
+    }
+    .sidebar.active .sidebar__caption {
+        text-align: left;
+        padding-left: 20px;
+        span{
+            display: inline-block;
+        }
+    }
+    .sidebar .sidebar__arrow,
+    .sidebar .sidebar__desc,
+    .sidebar .sidebar__bottom .sidebar__link .sidebar__text{
+        display: none;
+    }
+    .sidebar.active .sidebar__arrow,
+    .sidebar.active .sidebar__desc,
+    .sidebar.active .sidebar__bottom .sidebar__link .sidebar__text{
+        display: block;
+    }
+}
+
+@include respond-to('desktop-l'){
+    .sidebar {
+        width: 255px;
+        padding-bottom: 90px;
+        transform: translateX(-100%);
+        transition: all .2s;
+    }
+    .sidebar__head .sidebar__close {
+        display: inline-block;
+    }
+    .sidebar__logo {
+        display: inline-block;
+    }
+    .sidebar__toggle {
+        display: none;
+    }
+    .sidebar__item {
+        padding: 0 20px;
+    }
+    .sidebar__bottom {
+        padding: 0 20px;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+        box-shadow: none;
+    }
+    .sidebar.small.active {
+        box-shadow: none;
+    }
+}
+
+@include respond-to('lg-mobile'){
+    .sidebar {
+        padding: 94px 20px 72px;
+    }
+    .sidebar__head {
+        height: 94px;
+    }
+    .sidebar__nav {
+        margin-bottom: 16px;
+    }
+    .sidebar__item {
+        height: 52px;
+    }
+}
+
+.page.toggle .sidebar.active .sidebar__bottom .sidebar__text{
+    display: block;
+}
+
+.page.toggle .sidebar.active .sidebar__caption{
+    text-align: left;
+    padding-left: 20px;
+    span{
+        display: inline-block;
+    }
+}

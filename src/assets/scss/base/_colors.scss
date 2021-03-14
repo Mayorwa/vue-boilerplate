@@ -1,0 +1,117 @@
+$grey-light-1: #fbfbfb;
+$grey-light-2: #64626A;
+$grey-light-3: #D1D0D6;
+$grey-light-4: #8E8C95;
+$grey-light-6: #EBEAED;
+$grey-accent: #eaedef;
+$grey-accent-hover: #d9dfe3;
+$grey-body: #F2F3F7;
+$grey-dark-1: #1A1A1A;
+$grey-dark-2: #333333;
+$grey-dark-3: #0c0c0c;
+$grey-dark-4: #7C8087;
+$grey-dark-5: #7A7B85;
+$grey-blue: #8fa6c7;
+
+$black: #000000;
+$black-1: #020c18;
+$black-2: #000517;
+$black-3: #231f20;
+$black-4: #131414;
+$black-5: #343434;
+
+$text-dark: #3B3A40;
+$text-primary: #503F75;
+$white: #FFFFFF;
+$text-accent: #F16C87;
+$text-accent-hover: #f14159;
+$text-pink: #FAD8E6;
+$text-pink-hover: #FACCD5;
+$bg-purple: #5D4C81;
+$text-grey: #F1F1F1;
+$body-shadow: #D6D6D6;
+$scroll-bar: #7E7979;
+$light-grey: #C4C4C4;
+$dark-brown: #413c3d;
+$text-dark-1: #929292;
+$bg-tertiary: #58D1C8;
+$bg-tertiary-hover: #1ED1CA;
+
+$green-1: #2ae9ae;
+$green-2: #00978c;
+$green-3: #008751;
+$green-light: #33ffc6;
+$green-dark: #2f494a;
+
+$pink-1: #ff9fbb;
+$pink-2: #ff85f9;
+
+$text-black: #1D293F;
+$text-orange: #FF6600;
+$text-orange-80: #ff8533;
+$blue-light: #04c5ff;
+$blue-light-1: #CDF2FC;
+$blue-1: #54d0ea;
+$blue-2: #4f85ff;
+$dark-blue: #034979;
+$blue-grey: #1A202C;
+$blue-grey-20: #f1f7f9;
+$text-blue-80: rgba(39, 34, 98, 0.6);
+$text-red: #ff2e2e;
+$text-red-80: #f00;
+$text-blue: #355DFF;
+$text-green: #27AE60;
+$text-green-80: #219653;
+$text-blue-80: #1140ff;
+$grey-light-5: rgba(21, 20, 57, 0.4);
+$grey-light-6: rgba(21, 20, 57, 0.6);
+
+$box-shad: -25px 20px 44px rgba(48, 200, 209, 0.17);
+
+$purple-1: #8159f1;
+$purple-2: #140945;
+
+$orange: #FFA500;
+
+$alert-valid: $green-2;
+$alert-warning: #E15733;
+$alert-error: #f6482e;
+
+$transparent: rgba(0, 0, 0, 0);
+// Easings
+$ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+$ease-in-out-sine: cubic-bezier(0.445, 0, 0.55, 0.95);
+$ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+$ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+$footer-gradient: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(218, 209, 255, 0.4) 100%);
+
+.success{
+    color: $text-green-80;
+}
+
+.primary{
+    color: $text-blue;
+}

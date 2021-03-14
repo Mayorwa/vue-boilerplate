@@ -1,0 +1,256 @@
+.button {
+    align-items: center;
+    padding: 17px 26px;
+    border-radius: 4px;
+    background: $blue-2;
+    color: $grey-light-1;
+    letter-spacing: 1.75px;
+    line-height: 20px;
+    font-size: 11px;
+    font-family: $font-1;
+    display: block;
+    width: fit-content;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s $ease-out-quad, background-color 0.3s $ease-out-quad,
+    border-color 0.3s $ease-out-quad, box-shadow 0.3s $ease-out-quad;
+
+    &:hover {
+        text-decoration: none;
+        background-color: $green-light;
+
+        .icon.caret-right {
+            transform: translateX(4px)
+        }
+    }
+
+    .icon {
+        display: inline-block;
+        transition: fill 0.3s $ease-out-quad, transform 0.3s $ease-out-quad;
+    }
+
+    .icon.caret-right {
+        margin-left: 10px;
+        margin-bottom: 2px;
+    }
+
+    &--black {
+        background-color: $black-3;
+        color: white;
+
+        .icon {
+            fill: white;
+        }
+
+        &:hover {
+            color: white;
+            background: $dark-brown;
+
+            .icon {
+                fill: white;
+            }
+        }
+    }
+
+    &--grey {
+        background-color: $grey-accent;
+        border: 2px solid transparent;
+
+        &:hover {
+            border-color: $grey-accent-hover;
+            background-color: $grey-accent-hover;
+        }
+    }
+
+    &--white {
+        background-color: $white;
+        border: 2px solid transparent;
+        color: $text-black;
+
+        &:hover {
+            border-color: white;
+            background-color: transparent;
+        }
+    }
+
+    &--white-black, &--white-black:hover {
+        background-color: $white;
+        border: 1px solid hsla(0,0%,89.4%,.8);
+        color: $text-black;
+    }
+
+    &--red-white {
+        background-color: $text-red;
+        border: 2px solid transparent;
+        color: $white;
+
+        &:hover {
+            background-color: $text-red-80;
+        }
+    }
+
+    &--success {
+        background-color: $text-green;
+        border: 2px solid transparent;
+        color: $white;
+
+        &:hover {
+            background-color: $text-green-80;
+        }
+    }
+
+    &--blue-white {
+        background-color: $text-blue;
+        border: 2px solid transparent;
+        color: $white;
+
+        &:hover {
+            background-color: $text-blue-80;
+        }
+    }
+
+    &--blue-transparent{
+        background-color: rgba(34, 65, 136, 0.25);
+        color: rgb(34, 65, 136);
+        &:hover {
+            background-color: rgba(34, 65, 136, 0.35);
+        }
+    }
+
+    &--red-transparent{
+        background-color: rgba(255,46,46,0.25);
+        color: $text-red;
+        &:hover {
+            background-color: rgba(255,46,46,0.35);
+        }
+    }
+
+    &--orange-white {
+        background-color: $text-orange;
+        border: 2px solid transparent;
+        color: $white;
+
+        &:hover {
+            background-color: $text-orange-80;
+        }
+    }
+
+    &--white-orange {
+        background-color: $white;
+        border: 2px solid transparent;
+        color: $text-orange;
+
+        &:hover {
+            background-color: $grey-light-1;
+        }
+    }
+
+    &--primary {
+        background-color: $text-blue;
+        border: 1px solid $text-blue;
+        &:hover {
+            background-color: transparent;
+            color: $text-blue;
+        }
+    }
+
+    &--purple {
+        color: white;
+        background-color: $text-primary;
+
+        .icon {
+            fill: white;
+        }
+
+        &:hover {
+            background-color: #36296C;
+        }
+    }
+
+    &--pink {
+        color: $text-primary;
+        background-color: $text-pink;
+
+        .icon {
+            fill: white;
+        }
+
+        &:hover {
+            background-color: $text-pink-hover;
+        }
+    }
+    &-outline--blue{
+        color: $text-blue;
+        background-color: transparent;
+        border: 2px solid $text-blue;
+
+
+        .icon {
+            fill: white;
+        }
+
+        &:hover {
+            background-color: #d7eaff;
+        }
+    }
+
+    &--s {
+        border-radius: 12px;
+        padding: 10px 14px;
+    }
+    &_wide{
+        min-width: 100%;
+    }
+}
+
+.button-hover {
+    &:hover {
+        ~ .button,
+        .button {
+            &--white {
+                border-color: white;
+                box-shadow: 0 10px 20px 0 rgba(179,193,203,0.40);
+            }
+
+            .icon.caret-right {
+                transform: translateX(4px)
+            }
+        }
+    }
+}
+
+.pill{
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 10px;
+    background: rgba(1,103,255, 0.17);
+    color: $text-blue;
+    letter-spacing: 1.75px;
+    margin: 0 auto;
+    line-height: 1;
+    font-size: 11px;
+    font-family: $font-1;
+    display: block;
+    width: fit-content;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s $ease-out-quad, background-color 0.3s $ease-out-quad,
+    border-color 0.3s $ease-out-quad, box-shadow 0.3s $ease-out-quad;
+    &--blue{
+        background: rgba(1,103,255, 0.17);
+        color: $text-blue;
+    }
+
+    &--green{
+        background: rgba(39, 174, 96, 0.17);
+        color: $text-green-80;
+    }
+
+    &--red{
+        background: rgba(255,46,46,0.25);
+        color: $text-red;
+    }
+}

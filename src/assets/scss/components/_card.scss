@@ -1,0 +1,268 @@
+.card {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.card__next {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.146143);
+    text-align: center;
+    cursor: pointer;
+}
+
+.card__next .icon {
+    font-size: 10px;
+    fill: #11142D;
+    transition: fill .2s;
+}
+
+.card__next:hover .icon {
+    fill: #355DFF;
+}
+
+.card__chart_total-balance {
+    height: 220px;
+    margin-top: -15px;
+}
+
+.card__inner .card__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.05;
+}
+
+
+.card__inner .card__number {
+    margin-bottom: 16px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.05;
+    color: $text-blue;
+    span{
+        color: $text-black;
+        font-size: 13px;
+    }
+}
+
+.card__currency {
+    display: inline-block;
+    margin-bottom: 3px;
+    padding: 0 11px;
+    border-radius: 13px;
+    background: #FF9F38;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #ffffff;
+}
+
+.card__inner .card__price {
+    margin-bottom: 32px;
+}
+
+.card__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.card__head_mb32 {
+    margin-bottom: 32px;
+}
+
+.card__item {
+    display: flex;
+    padding-top: 20px;
+}
+
+.card__icon, .card__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.card__icon {
+    border-radius: 50%;
+}
+
+.card__arrow .icon {
+    transition: fill .2s;
+}
+
+.card__details {
+    flex-grow: 1;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.card__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.card__category {
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+.card__date {
+    font-size: 12px;
+    line-height: 1.33333;
+    font-weight: 500;
+    color: #808191;
+}
+
+.card__status {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 1.33333;
+    font-weight: 500;
+}
+
+.card__item .card__price {
+    font-weight: 600;
+}
+
+.card__view {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 26px;
+    font-weight: 600;
+    color: #355DFF;
+}
+
+.card__view .icon {
+    fill: #11142D;
+}
+
+.card__view:hover .icon {
+    fill: #355DFF;
+}
+.card__img{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    svg {
+        width: 30px;
+        height: 30px;
+        g [fill]{
+            fill: $white;
+        }
+    }
+}
+
+.card__img-blue{
+  background-color: $text-blue;
+}
+
+.card__filters {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.card__filters .checkbox:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.card__btn{
+    height: 38px;
+    font-size: 14px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    white-space: nowrap;
+}
+
+.card__btns {
+    display: flex;
+    margin: 0 -4px;
+}
+
+.card__btns_mt40 {
+    margin-top: 40px;
+}
+
+.card__btns .card__btn {
+    flex-grow: 1;
+    min-width: auto;
+    margin: 0 4px;
+    padding: 0;
+}
+
+.card__reset {
+    display: block;
+    margin-top: 24px;
+    border-top: 1px solid #E4E4E4;
+    padding-top: 24px;
+    line-height: 1.42857;
+    font-weight: 700;
+    color: #808191;
+    transition: color .2s;
+}
+
+.card__reset:hover {
+    color: #355DFF;
+}
+
+.card_widget {
+    padding: 32px;
+    border-radius: 24px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.card_widget:before, .card_widget:after {
+    content: "";
+    position: absolute;
+    border-radius: 24px;
+}
+
+.card_widget:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: -8px;
+    z-index: -1;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.card_widget:after {
+    top: 32px;
+    right: 32px;
+    left: 32px;
+    bottom: -32px;
+    z-index: -2;
+    background: #E4E4E4;
+    filter: blur(86.985px);
+}
+
+.card:not(:last-child) {
+    margin-bottom: 98px;
+}

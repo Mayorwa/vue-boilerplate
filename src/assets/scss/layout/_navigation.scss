@@ -1,0 +1,49 @@
+.bottomBar {
+    position: fixed;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+    border-top: 1px solid #E4E4E4;
+    @include respond-to('lg-mobile'){
+        display: flex;
+    }
+}
+.bottomBar a {
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+    border-radius: 12px;
+    transition: all .25s ease;
+}
+.bottomBar_item{
+    white-space: nowrap;
+    font-weight: 600;
+    color: #808191;
+    padding: 0 15px;
+    &:hover, &.active{
+        background: rgba(188, 197, 241, 0.3);
+        color: #355DFF;
+    }
+}
+.bottomBar_icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    .icon{
+        height: 30px;
+        width: 30px;
+        fill: #808191;
+    }
+}

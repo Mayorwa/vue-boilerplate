@@ -1,0 +1,26 @@
+//
+// FONT FAMILIES
+//
+
+@font-face {
+    font-family: "LGF";
+    src: url("assets/fonts/Louis-George-Cafe.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "LGF";
+    src: url("assets/fonts/Louis-George-Cafe-Bold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "LGF";
+    src: url("assets/fonts/Louis-George-Cafe-Light.ttf");
+    font-weight: 200;
+}
+
+// Fonts
+// -------------------------
+
+$font-1: 'LGF';

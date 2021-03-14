@@ -1,0 +1,123 @@
+* {
+    box-sizing: inherit;
+    &:before {
+        box-sizing: inherit;
+    }
+    &:after {
+        box-sizing: inherit;
+    }
+
+    margin: 0;
+    padding: 0;
+    font-family: $font-1;
+}
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 62.5%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-family: $font-1;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $blue-grey;
+    background: $white;
+}
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    outline: none;
+    text-decoration: none;
+    img {
+        border: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+i {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+ol {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    list-style-type: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    list-style-type: none;
+}
+li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+button {
+    cursor: pointer;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    font-family: $font-1;
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+}
+.section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.center {
+    max-width: 1344px;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+.title {
+    font-size: 40px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+.d-none{
+    display: none;
+}
+html.no-scroll {
+    overflow: hidden;
+}
+body.no-scroll {
+    overflow: hidden;
+}
